@@ -10,6 +10,7 @@ const {
 	title = 'Diego Veintimilla: Software Developer',
 	description = 'Diego Veintimilla Software Developer in Latam (Ecuador). Computer Science Engineer, programmer and developer.',
 } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
 ---
 
 <meta charset="UTF-8" />
@@ -25,6 +26,8 @@ const {
 	href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@500;600&display=swap"
 	rel="stylesheet"
 />
+
+<meta property="og:url" content={canonical} />
 <!-- <link
 	href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap"
 	rel="stylesheet"
