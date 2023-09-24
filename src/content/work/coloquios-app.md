@@ -1,7 +1,7 @@
 ---
-title: Coloquios App | Web App, App mobile
+title: Coloquios App | Web, App
 publishDate: 2020-03-02 00:00:00
-img: /assets/stock-1.jpg
+img: /assets/coloquios-app-thumb.png
 img_alt: Iridescent ripples of a bright blue and pink liquid
 description: |
   Coloquios App, mobile app and web app to automatize attendance registration.

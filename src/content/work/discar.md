@@ -1,7 +1,7 @@
 ---
-title: Discar - Sea World Hotel (Manabi) | Web App
+title: Discar | Web
 publishDate: 2019-12-01 00:00:00
-img: /assets/stock-2.jpg
+img: /assets/discar-thumb.png
 img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
 description: |
   Web app for administration for hotel managment

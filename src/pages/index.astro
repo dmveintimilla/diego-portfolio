@@ -36,17 +36,17 @@ const projects = (await getCollection('work'))
 				>
 					<div class="roles">
 						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Product Manager</Pill>
+						<Pill><Icon icon="light" size="1.33em" /> Innovator</Pill>
 						<Pill><Icon icon="pencil-line" size="1.33em" /> Creator</Pill>
 					</div>
 				</Hero>
 
 				<img
 					title="Diego Veintimilla"
-					alt="Diego Veintimilla Desarrollador de Software, Product Manager"
+					alt="Diego Veintimilla Desarrollador de Software, Software Developor, Software Engineer, Fullstack, Product Manager"
 					width="480"
 					height="620"
-					src="/assets/portrait.jpeg"
+					src="/assets/at-work.jpeg"
 				/>
 			</header>
 
@@ -91,7 +91,7 @@ const projects = (await getCollection('work'))
 				<div class="gallery">
 					<Grid variant="small">
 						{
-							['Bachelor Degree Computer Science Engineer', 'Bachelor Degree in Interactive Media', 'Minor in Web and App Development', 'Certification in Scrum Fundamentals', 'Course "Formulation of Innovation Challenges"'].map((brand) => (
+							['Bachelor Degree Computer Science Engineer', 'Bachelor Degree in Interactive Media Design', 'Minor in Web and App Development', 'Certification in "Scrum Fundamentals"', 'Certification in "Formulation of Innovation Challenges"'].map((brand) => (
 								<li class="mention-card">
 									<p>{brand}</p>
 								</li>
@@ -121,7 +121,7 @@ const projects = (await getCollection('work'))
 	.hero img {
 		aspect-ratio: 5 / 4;
 		object-fit: cover;
-		object-position: top;
+		object-position:center;
 		border-radius: 1.5rem;
 		box-shadow: var(--shadow-md);
 	}
