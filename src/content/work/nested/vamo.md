@@ -1,7 +1,7 @@
 ---
 title: Vamo' | App
 publishDate: 2020-03-04 00:00:00
-img: /assets/vamo-thumb.png
+img: /assets/vamo-thumb.webp
 img_alt: Pearls of silky soft white cotton, bubble up under vibrant lighting
 description: |
   Development of soccer app that connect players.
