@@ -36,7 +36,10 @@ const { Content } = await entry.render();
 					<Hero title={entry.data.title} align="start">
 						<div class="details">
 							<div class="tags">
-								{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
+								<div class="item-tags">
+									{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
+								</div>
+								
 							</div>
 							<p class="description">{entry.data.description}</p>
 						</div>
@@ -77,8 +80,20 @@ const { Content } = await entry.render();
 
 	.tags {
 		display: flex;
+		
 		gap: 0.5rem;
 	}
+
+	.item-tags{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		flex-direction: row;
+		gap: 0.5rem;
+	}
+	
 
 	.description {
 		font-size: var(--text-lg);
@@ -133,6 +148,20 @@ const { Content } = await entry.render();
 		text-decoration-color: currentColor;
 	}
 
+/* 
+	@media (max-width: 27em) {
+	
+		.tags {
+		display: flex
+	}
+
+	.item-tags{
+		flex-direction: column; 
+		display: inline-block; 
+	}
+	
+	} */
+
 	@media (min-width: 50em) {
 		.back-link {
 			display: block;
@@ -142,10 +171,13 @@ const { Content } = await entry.render();
 		.details {
 			flex-direction: row;
 			gap: 2.5rem;
+			
 		}
 
 		.content :global(blockquote) {
 			font-size: var(--text-2xl);
 		}
+
+	
 	}
 </style>
