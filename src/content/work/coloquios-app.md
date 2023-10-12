@@ -17,7 +17,7 @@ tags:
 <!-- 
 > Tell me and I forget. Teach me and I remember. Involve me and I learn. -->
 
-At my university it is mandatory to attend academic lectures during the whole university period and to complete 40 hours. Due to the large number of students, recording attendance for academic events was a time consuming task. The person in charge of taking attendance used to upload the attendance notes manually, imagine taking attendance for about 150 students every week! I decided to solve this problem by creating this app.
+At my university it is mandatory to attend academic seminaries during the whole university period and to complete 40 hours. Due to the large number of students, recording attendance for academic events was a time consuming task. The person in charge of taking attendance used to upload the attendance notes manually, imagine taking attendance for about 150 students every week! I decided to solve this problem by creating this app.
 
 ![Coloquios App Statistics](../../../public/assets/projects/coloquios/1.png)
 

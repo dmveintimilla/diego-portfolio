@@ -91,7 +91,7 @@ const projects = (await getCollection('work'))
 				<div class="gallery">
 					<Grid variant="small">
 						{
-							['Bachelor Degree Computer Science Engineer', 'Bachelor Degree in Interactive Media Design', 'Minor in Web and App Development', 'Certification in "Scrum Fundamentals"', 'Certification in "Formulation of Innovation Challenges"'].map((brand) => (
+							['Bachelor Degree Computer Science Engineer - USFQ', 'Bachelor Degree in Interactive Media Design - USFQ', 'Minor in Web and App Development - USFQ', 'Certification in "Scrum Fundamentals" - Certiprof', 'Certification in "Formulation of Innovation Challenges" - UPV'].map((brand) => (
 								<li class="mention-card">
 									<p>{brand}</p>
 								</li>
@@ -233,13 +233,14 @@ const projects = (await getCollection('work'))
 	.mention-card {
 		display: flex;
 		height: 7rem;
+		padding: 1.125rem 2.5rem;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
 		border: 1px solid var(--gray-800);
 		border-radius: 1.5rem;
 		color: var(--gray-300);
-		background: var(--gradient-subtle);
+		background: var(--gray-999_40);
 		box-shadow: var(--shadow-sm);
 	}
 
