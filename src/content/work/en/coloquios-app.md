@@ -11,6 +11,7 @@ tags:
   - Backend
   - Dev
   - User Testing
+locale: en
 ---
 
 ## Why I build this project?
@@ -19,17 +20,17 @@ tags:
 
 At my university it is mandatory to attend academic seminaries during the whole university period and to complete 40 hours. Due to the large number of students, recording attendance for academic events was a time consuming task. The person in charge of taking attendance used to upload the attendance notes manually, imagine taking attendance for about 150 students every week! I decided to solve this problem by creating this app.
 
-![Coloquios App Statistics](../../../public/assets/projects/coloquios/1.png)
+![Coloquios App Statistics](../../../../public/assets/projects/coloquios/1.png)
 
-![Coloquios App Image Automatize attendance registration](../../../public/assets/projects/coloquios/2.png)
+![Coloquios App Image Automatize attendance registration](../../../../public/assets/projects/coloquios/2.png)
 
-![Coloquios App two profiles](../../../public/assets/projects/coloquios/3.png)
+![Coloquios App two profiles](../../../../public/assets/projects/coloquios/3.png)
 
-![Coloquios App panel administration](../../../public/assets/projects/coloquios/4.png)
+![Coloquios App panel administration](../../../../public/assets/projects/coloquios/4.png)
 
-![Coloquios App student profile](../../../public/assets/projects/coloquios/5.png)
+![Coloquios App student profile](../../../../public/assets/projects/coloquios/5.png)
 
-![Coloquios App web and mobile application](../../../public/assets/projects/coloquios/6.png)
+![Coloquios App web and mobile application](../../../../public/assets/projects/coloquios/6.png)
 
 <!-- 
 Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel quam elementum pulvinar etiam non.

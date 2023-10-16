@@ -1,0 +1,173 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import ContactCTA from "../../components/ContactCTA.astro";
+import Hero from "../../components/Hero.astro";
+---
+
+<BaseLayout
+	title="About | Diego Veintimilla"
+	description="About Diego Veintimilla Lorem Ipsum"
+>
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/diego-veintimilla-software-engineer-developer.webp"
+					alt="Diego Veintimilla at univeristy in a computer science, software developer, engineering class"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Who I am?</h2>
+				<div class="content">
+					<p>
+						Have you ever used a website that was difficult or impossible to navigate? Do you consider that the virtual world is now unavoidable when promoting an idea, a business or entrepreneurship?
+					</p>
+					&nbsp;
+					<p>
+						I am Diego Veintimilla, computer science engineer and interactive media designer, I help startups or large companies to create custom software that is focused on the user, so that they have a unique experience. With my design vision, business focus and programming skills I am dedicated to create differentiating websites and apps.
+					</p>
+					&nbsp;
+					<p>
+						What sets me apart? I am a passionate technology professional with more than 2 years of experience developing (and designing) software for national and international companies located in the United States such as Kin Analytics and Capmation. 
+					</p>
+					&nbsp;
+					<p>
+						Do you dare to create the future with me?
+						<a href="mailto:dmveintimilla@gmail.com"> Contact me</a>
+					</p>
+
+				</div>
+
+				<!-- <h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						I am a computer science engineer with a strong focus on
+						software development. I possess an extensive background
+						in programming and excel in web and application
+						development. My skill set is complemented by leadership
+						abilities, adaptability, effective communication, and a
+						collaborative team spirit, enabling me to contribute
+						efficiently to achieve organizational objectives.
+					</p>
+					<p>
+						I hold a Bachelor's degree in Software Engineering from
+						USFQ and am currently pursuing a second degree in
+						Interactive Media. I bring my expertise to Kin Analytics
+						and Capmation, where I serve as a dedicated software
+						engineer, consistently driving innovation and delivering
+						high-quality solutions quam elementum pulvinar etiam
+						non.
+					</p>
+					 <p>
+						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
+						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
+						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
+						pretium fusce.
+					</p>
+				</div> -->
+			</section>
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					<a>
+						Computer Science - Universidad
+						San Francisco de Quito (USFQ)
+					</a>
+					<p>
+						Graduated with a comprehensive understanding of software
+						engineering principles and practices, providing a strong
+						foundation for my career in technology.
+					</p>
+
+					<a>
+						Interactive Media - Universidad San Francisco de Quito
+						(USFQ)
+					</a>
+					<p>
+						Actively enhancing my skills and knowledge in
+						interactive media, further broadening my expertise in
+						the digital landscape.
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<p>Proficient in multiple programming languages, adept at web and application development, and skilled in leading projects with a strong strategic vision. Possesses market research and analysis capabilities, user-centric design thinking, and effective communication skills to manage and deliver innovative products. Expertise in project management, data analysis, and decision-making, with a focus on user needs and collaboration across cross-functional teams. Financial acumen, risk management, and a creative problem-solving mindset guide product development through its entire lifecycle, ensuring technical excellence and market success.</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.contact-title {
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>

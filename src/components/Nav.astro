@@ -2,21 +2,29 @@
 import Icon from './Icon.astro';
 import ThemeToggle from './ThemeToggle.astro';
 import type { iconPaths } from './IconPaths';
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
+import LenguagePicker from './LenguagePicker.astro';
+import { languages } from '../i18n/ui';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
-	{ label: 'Home', href: '/' },
-	{ label: 'Work', href: '/work/' },
-	{ label: 'About', href: '/about/' },
+	{ label: t('nav.home'), href: translatePath('/') },
+	{ label: t('nav.work'), href: translatePath('/work/')},
+	{ label: t('nav.about'), href: translatePath('/about/') },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
 const iconLinks: { label: string; href: string;  icon: keyof typeof iconPaths }[] = [
-	{ label: 'Twitter', href: 'https://twitter.com/dmveintimilla', icon: 'twitter-logo' },
+	// { label: 'Twitter', href: 'https://twitter.com/dmveintimilla', icon: 'twitter-logo' },
 	// { label: 'Twitch', href: 'https://twitch.tv/me', icon: 'twitch-logo' },
 
 	
-	{ label: 'Instagram', href: 'https://www.instagram.com/dmveintimilla/', icon: 'instagram-logo' },
+	// { label: 'Instagram', href: 'https://www.instagram.com/dmveintimilla/', icon: 'instagram-logo' },
 	{ label: 'Linkedin', href: 'https://linkedin.com/in/dmveintimilla', icon: 'linkedin-logo' },
 	{ label: 'Behance', href: 'https://behance.net/dmveintimilla', icon: 'behance-logo' },
 	{ label: 'GitHub', href: 'https://github.com/dmveintimilla', icon: 'github-logo' },
@@ -80,7 +88,7 @@ const iconLinks: { label: string; href: string;  icon: keyof typeof iconPaths }[
 								{
 									active:
 										Astro.url.pathname === href ||
-										(href !== '/' && Astro.url.pathname.startsWith(href)),
+										(href !== '/' && href !== '/es/' && href !== '/pt/' &&Astro.url.pathname.includes(href)),
 								},
 							]}
 							href={href}
@@ -92,6 +100,7 @@ const iconLinks: { label: string; href: string;  icon: keyof typeof iconPaths }[
 			}
 		</ul>
 	</noscript>
+
 	<noscript>
 		<div class="menu-footer">
 			<div class="socials">
@@ -118,7 +127,7 @@ const iconLinks: { label: string; href: string;  icon: keyof typeof iconPaths }[
 								{
 									active:
 										Astro.url.pathname === href ||
-										(href !== '/' && Astro.url.pathname.startsWith(href)),
+										(href !== '/' && href !== '/es/' && href !== '/pt/' && Astro.url.pathname.includes(href)),
 								},
 							]}
 							href={href}
@@ -129,6 +138,7 @@ const iconLinks: { label: string; href: string;  icon: keyof typeof iconPaths }[
 				))
 			}
 		</ul>
+		
 		<div class="menu-footer">
 			<div class="socials">
 				{
@@ -144,6 +154,32 @@ const iconLinks: { label: string; href: string;  icon: keyof typeof iconPaths }[
 			<div class="theme-toggle">
 				<ThemeToggle />
 			</div>
+
+			<nonscript>
+				<ul class="list-container">
+					{Object.entries(languages).map(([lang, label]) => (
+					  <li class="list-item">
+						
+						<a  aria-current={Astro.url.pathname === lang}
+							class:list={[
+								'anchorLanguage',
+								{
+									active:
+										Astro.url.pathname === lang ||
+										(lang !== '' && lang !== '/es/' && lang !== '/pt/' && Astro.url.pathname.includes('')),
+										// (lang !== '' && lang !== '/es/' && lang !== '/pt/' && Astro.url.pathname.includes(lang)),
+								},
+							]}
+						
+						href={translatePath('/', lang)}>{label}</a>
+					  </li>
+					))}
+				  </ul>
+			 </nonscript>
+
+			<!-- <div class="language-toggle">
+				<LenguagePicker />
+			</div> -->
 		</div>
 	</div>
 </nav>
@@ -270,6 +306,18 @@ const iconLinks: { label: string; href: string;  icon: keyof typeof iconPaths }[
 		color: var(--gray-0);
 	}
 
+	.anchorLanguage {
+		display: inline-block;
+		color: var(--gray-300);
+		text-decoration: none;
+	}
+
+	.anchorLanguage.active {
+		color: var(--gray-0);
+	}
+
+	
+
 	.menu-footer {
 		--icon-size: var(--text-xl);
 		--icon-padding: 0.5rem;
@@ -308,6 +356,15 @@ const iconLinks: { label: string; href: string;  icon: keyof typeof iconPaths }[
 		align-items: center;
 		height: calc(var(--icon-size) + 2 * var(--icon-padding));
 	}
+
+	.list-container {
+        width: 5rem;
+            justify-content: space-between;
+        }
+
+        .list-item {
+            list-style: none;
+        }
 
 	@media (min-width: 50em) {
 		nav {
@@ -382,6 +439,19 @@ const iconLinks: { label: string; href: string;  icon: keyof typeof iconPaths }[
 		.socials {
 			display: none;
 		}
+		.list-container {
+        width: 5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .list-item {
+            list-style: none;
+        }
+
+        ul{
+            padding-inline-start: 0.7rem;
+        }
 	}
 
 	@media (min-width: 60em) {
