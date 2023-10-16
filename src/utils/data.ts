@@ -46,13 +46,29 @@ const technologies = [
       ariaLink: 'TypeScript Documentation Website',
     },
     {
-      name: 'Tailwind CSS',
+      name: 'Angular',
       imgSrc:
-        'https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg',
-      altSrc: 'Tailwind CSS Logo',
-      link: 'https://tailwindcss.com/',
-      ariaLink: 'TailwindCSS Documentation Website',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/800px-Angular_full_color_logo.svg.png',
+      altSrc: 'Angular Logo',
+      link: 'https://angular.io',
+      ariaLink: 'Angular Documentation Website',
     },
+    {
+      name: 'Flutter',
+      imgSrc:
+        'https://web-strapi.mrmilu.com/uploads/flutter_logo_470e9f7491.png',
+      altSrc: 'Flutter Logo',
+      link: 'https://flutter.dev',
+      ariaLink: 'Flutter Documentation Website',
+    },
+    // {
+    //   name: 'Tailwind CSS',
+    //   imgSrc:
+    //     'https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg',
+    //   altSrc: 'Tailwind CSS Logo',
+    //   link: 'https://tailwindcss.com/',
+    //   ariaLink: 'TailwindCSS Documentation Website',
+    // },
     // {
     //   name: 'Next.js',
     //   imgSrc: 'https://static.netify.ai/logos/v/e/r/irepry/icon.png?v=1',
