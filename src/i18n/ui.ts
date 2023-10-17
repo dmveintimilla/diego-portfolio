@@ -32,7 +32,7 @@ export const languages = {
       'skills.description2': 'Líder innovador, estratégico y colaborador.',
       'skills.title3': 'Product Manager',
       'skills.description3': 'Enfocado en ofrecer productos de éxito centrados en el usuario.',
-      'contact.title': 'Te gustaría trabajar conmigo?',
+      'contact.title': '¿Te gustaría trabajar conmigo?',
       'contact.message': 'Envíame un mensaje',
       
     },

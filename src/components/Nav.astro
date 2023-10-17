@@ -1,34 +1,52 @@
 ---
-import Icon from './Icon.astro';
-import ThemeToggle from './ThemeToggle.astro';
-import type { iconPaths } from './IconPaths';
-import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
-import LenguagePicker from './LenguagePicker.astro';
-import { languages } from '../i18n/ui';
+import Icon from "./Icon.astro";
+import ThemeToggle from "./ThemeToggle.astro";
+import type { iconPaths } from "./IconPaths";
+import {
+	getLangFromUrl,
+	useTranslations,
+	useTranslatedPath,
+} from "../i18n/utils";
+import LenguagePicker from "./LenguagePicker.astro";
+import { languages } from "../i18n/ui";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 
-
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
-	{ label: t('nav.home'), href: translatePath('/') },
-	{ label: t('nav.work'), href: translatePath('/work/')},
-	{ label: t('nav.about'), href: translatePath('/about/') },
+	{ label: t("nav.home"), href: translatePath("/") },
+	{ label: t("nav.work"), href: translatePath("/work/") },
+	{ label: t("nav.about"), href: translatePath("/about/") },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
-const iconLinks: { label: string; href: string;  icon: keyof typeof iconPaths }[] = [
+const iconLinks: {
+	label: string;
+	href: string;
+	icon: keyof typeof iconPaths;
+}[] = [
 	// { label: 'Twitter', href: 'https://twitter.com/dmveintimilla', icon: 'twitter-logo' },
 	// { label: 'Twitch', href: 'https://twitch.tv/me', icon: 'twitch-logo' },
 
-	
 	// { label: 'Instagram', href: 'https://www.instagram.com/dmveintimilla/', icon: 'instagram-logo' },
-	{ label: 'Linkedin', href: 'https://linkedin.com/in/dmveintimilla', icon: 'linkedin-logo' },
-	{ label: 'Behance', href: 'https://behance.net/dmveintimilla', icon: 'behance-logo' },
-	{ label: 'GitHub', href: 'https://github.com/dmveintimilla', icon: 'github-logo' },
-	
+	{
+		label: "Linkedin",
+		href: "https://linkedin.com/in/dmveintimilla",
+		icon: "linkedin-logo",
+	},
+	{
+		label: "Behance",
+		href: "https://behance.net/dmveintimilla",
+		icon: "behance-logo",
+	},
+	{
+		label: "GitHub",
+		href: "https://github.com/dmveintimilla",
+		icon: "github-logo",
+	},
+
 	// { label: 'CodePen', href: 'https://codepen.io/me', icon: 'codepen-logo' },
 	// { label: 'YouTube', href: 'https://www.youtube.com/@me/', icon: 'youtube-logo' },
 ];
@@ -37,34 +55,54 @@ const iconLinks: { label: string; href: string;  icon: keyof typeof iconPaths }[
 <nav>
 	<div class="menu-header">
 		<a href="/" class="site-title">
-			<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.73 121.69">
+			<svg
+				id="Layer_2"
+				data-name="Layer 2"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 95.73 121.69"
+			>
 				<defs>
-				  <style>
-					.cls-1 {
-					  fill: #0d7377;
-					}
-			  
-					.cls-2 {
-					  fill: #1d1f1c;
-					}
-			  
-					.cls-3 {
-					  fill: #e9eaea;
-					}
-			  
-					.cls-4 {
-					  fill: #14ffec;
-					}
-				  </style>
+					<style>
+						.cls-1 {
+							fill: #0d7377;
+						}
+
+						.cls-2 {
+							fill: #1d1f1c;
+						}
+
+						.cls-3 {
+							fill: #e9eaea;
+						}
+
+						.cls-4 {
+							fill: #14ffec;
+						}
+					</style>
 				</defs>
 				<g id="Layer_15" data-name="Layer 15">
-				  <polygon class="cls-2" points="29.33 96.46 80.63 68.04 66.45 60.31 29.06 81.04 29.33 96.46"/>
-				  <polygon class="cls-3" points="95.73 76.3 14.64 121.69 14.64 32.03 28.32 39.51 29.33 96.46 80.62 68.05 95.73 76.3"/>
-				  <polygon class="cls-2" points="0 24.04 14.64 32.03 14.64 121.69 .05 113.73 0 24.04"/>
-				  <polygon class="cls-1" points="95.73 76.3 95.73 59.72 0 7.97 0 24.04 95.73 76.3"/>
-				  <polygon class="cls-4" points="95.73 59.72 95.61 44.23 14.43 0 0 7.97 95.73 59.72"/>
+					<polygon
+						class="cls-2"
+						points="29.33 96.46 80.63 68.04 66.45 60.31 29.06 81.04 29.33 96.46"
+					></polygon>
+					<polygon
+						class="cls-3"
+						points="95.73 76.3 14.64 121.69 14.64 32.03 28.32 39.51 29.33 96.46 80.62 68.05 95.73 76.3"
+					></polygon>
+					<polygon
+						class="cls-2"
+						points="0 24.04 14.64 32.03 14.64 121.69 .05 113.73 0 24.04"
+					></polygon>
+					<polygon
+						class="cls-1"
+						points="95.73 76.3 95.73 59.72 0 7.97 0 24.04 95.73 76.3"
+					></polygon>
+					<polygon
+						class="cls-4"
+						points="95.73 59.72 95.61 44.23 14.43 0 0 7.97 95.73 59.72"
+					></polygon>
 				</g>
-			  </svg>
+			</svg>
 			 Diego Veintimilla
 		</a>
 		<menu-button>
@@ -84,11 +122,14 @@ const iconLinks: { label: string; href: string;  icon: keyof typeof iconPaths }[
 						<a
 							aria-current={Astro.url.pathname === href}
 							class:list={[
-								'link',
+								"link",
 								{
 									active:
 										Astro.url.pathname === href ||
-										(href !== '/' && href !== '/es/' && href !== '/pt/' &&Astro.url.pathname.includes(href)),
+										(href !== "/" &&
+											href !== "/es/" &&
+											href !== "/pt/" &&
+											Astro.url.pathname.includes(href)),
 								},
 							]}
 							href={href}
@@ -123,11 +164,14 @@ const iconLinks: { label: string; href: string;  icon: keyof typeof iconPaths }[
 						<a
 							aria-current={Astro.url.pathname === href}
 							class:list={[
-								'link',
+								"link",
 								{
 									active:
 										Astro.url.pathname === href ||
-										(href !== '/' && href !== '/es/' && href !== '/pt/' && Astro.url.pathname.includes(href)),
+										(href !== "/" &&
+											href !== "/es/" &&
+											href !== "/pt/" &&
+											Astro.url.pathname.includes(href)),
 								},
 							]}
 							href={href}
@@ -138,7 +182,7 @@ const iconLinks: { label: string; href: string;  icon: keyof typeof iconPaths }[
 				))
 			}
 		</ul>
-		
+
 		<div class="menu-footer">
 			<div class="socials">
 				{
@@ -157,25 +201,43 @@ const iconLinks: { label: string; href: string;  icon: keyof typeof iconPaths }[
 
 			<nonscript>
 				<ul class="list-container">
-					{Object.entries(languages).map(([lang, label]) => (
-					  <li class="list-item">
-						
-						<a  aria-current={Astro.url.pathname === lang}
-							class:list={[
-								'anchorLanguage',
-								{
-									active:
-										Astro.url.pathname === lang ||
-										(lang !== '' && lang !== '/es/' && lang !== '/pt/' && Astro.url.pathname.includes('')),
-										// (lang !== '' && lang !== '/es/' && lang !== '/pt/' && Astro.url.pathname.includes(lang)),
-								},
-							]}
-						
-						href={translatePath('/', lang)}>{label}</a>
-					  </li>
-					))}
-				  </ul>
-			 </nonscript>
+					{
+						Object.entries(languages).map(([lang, label]) => (
+							<li class="list-item">
+								<a
+									aria-current={Astro.url.pathname === lang}
+									class:list={[
+										"anchorLanguage",
+										{
+											active:
+												Astro.url.pathname === lang 
+												// ||
+												// (lang !== "" &&
+												// 	lang !== "/es/" &&
+												// 	lang !== "/pt/" &&
+												// 	Astro.url.pathname.includes(
+												// 		lang,
+												// 	)),
+
+
+													// (lang !== '' && lang !== '/es/' && lang !== '/pt/' && Astro.url.pathname.includes(lang)),
+
+													// Astro.url.pathname === lang
+													// ||
+													// Astro.url.pathname === ''
+													//  ||
+													// Astro.url.pathname.includes(lang),
+										},
+									]}
+									href={translatePath("/", lang)}
+								>
+									{label}
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</nonscript>
 
 			<!-- <div class="language-toggle">
 				<LenguagePicker />
@@ -190,35 +252,39 @@ const iconLinks: { label: string; href: string;  icon: keyof typeof iconPaths }[
 			super();
 
 			// Inject menu toggle button when JS runs.
-			this.appendChild(this.querySelector('template')!.content.cloneNode(true));
-			const btn = this.querySelector('button')!;
+			this.appendChild(
+				this.querySelector("template")!.content.cloneNode(true),
+			);
+			const btn = this.querySelector("button")!;
 
 			// Hide menu (shown by default to support no-JS browsers).
-			const menu = document.getElementById('menu-content')!;
+			const menu = document.getElementById("menu-content")!;
 			menu.hidden = true;
 			// Add "menu-content" class in JS to avoid covering content in non-JS browsers.
-			menu.classList.add('menu-content');
+			menu.classList.add("menu-content");
 
 			/** Set whether the menu is currently expanded or collapsed. */
 			const setExpanded = (expand: boolean) => {
-				btn.setAttribute('aria-expanded', expand ? 'true' : 'false');
+				btn.setAttribute("aria-expanded", expand ? "true" : "false");
 				menu.hidden = !expand;
 			};
 
 			// Toggle menu visibility when the menu button is clicked.
-			btn.addEventListener('click', () => setExpanded(menu.hidden));
+			btn.addEventListener("click", () => setExpanded(menu.hidden));
 
 			// Hide menu button for large screens.
-			const handleViewports = (e: MediaQueryList | MediaQueryListEvent) => {
+			const handleViewports = (
+				e: MediaQueryList | MediaQueryListEvent,
+			) => {
 				setExpanded(e.matches);
 				btn.hidden = e.matches;
 			};
-			const mediaQueries = window.matchMedia('(min-width: 50em)');
+			const mediaQueries = window.matchMedia("(min-width: 50em)");
 			handleViewports(mediaQueries);
-			mediaQueries.addEventListener('change', handleViewports);
+			mediaQueries.addEventListener("change", handleViewports);
 		}
 	}
-	customElements.define('menu-button', MenuButton);
+	customElements.define("menu-button", MenuButton);
 </script>
 
 <style>
@@ -258,7 +324,7 @@ const iconLinks: { label: string; href: string;  icon: keyof typeof iconPaths }[
 		box-shadow: var(--shadow-md);
 	}
 
-	.menu-button[aria-expanded='true'] {
+	.menu-button[aria-expanded="true"] {
 		color: var(--gray-0);
 		background: linear-gradient(180deg, var(--gray-600), transparent),
 			radial-gradient(var(--gray-900), var(--gray-800) 150%);
@@ -271,7 +337,7 @@ const iconLinks: { label: string; href: string;  icon: keyof typeof iconPaths }[
 	.menu-button::before {
 		position: absolute;
 		inset: -1px;
-		content: '';
+		content: "";
 		background: var(--gradient-stroke);
 		border-radius: 999rem;
 		z-index: -1;
@@ -314,9 +380,8 @@ const iconLinks: { label: string; href: string;  icon: keyof typeof iconPaths }[
 
 	.anchorLanguage.active {
 		color: var(--gray-0);
+		text-decoration: underline;
 	}
-
-	
 
 	.menu-footer {
 		--icon-size: var(--text-xl);
@@ -358,13 +423,13 @@ const iconLinks: { label: string; href: string;  icon: keyof typeof iconPaths }[
 	}
 
 	.list-container {
-        width: 5rem;
-            justify-content: space-between;
-        }
+		width: 5rem;
+		justify-content: space-between;
+	}
 
-        .list-item {
-            list-style: none;
-        }
+	.list-item {
+		list-style: none;
+	}
 
 	@media (min-width: 50em) {
 		nav {
@@ -401,7 +466,7 @@ const iconLinks: { label: string; href: string;  icon: keyof typeof iconPaths }[
 		.nav-items::before {
 			position: absolute;
 			inset: -1px;
-			content: '';
+			content: "";
 			background: var(--gradient-stroke);
 			border-radius: 999rem;
 			z-index: -1;
@@ -440,18 +505,18 @@ const iconLinks: { label: string; href: string;  icon: keyof typeof iconPaths }[
 			display: none;
 		}
 		.list-container {
-        width: 5rem;
-            display: flex;
-            justify-content: space-between;
-        }
+			width: 5rem;
+			display: flex;
+			justify-content: space-between;
+		}
 
-        .list-item {
-            list-style: none;
-        }
+		.list-item {
+			list-style: none;
+		}
 
-        ul{
-            padding-inline-start: 0.7rem;
-        }
+		ul {
+			padding-inline-start: 0.7rem;
+		}
 	}
 
 	@media (min-width: 60em) {
